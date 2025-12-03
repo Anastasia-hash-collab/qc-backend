@@ -12,7 +12,7 @@ const YANDEX_TOKEN = process.env.YANDEX_TOKEN;
 
 // путь файла на Яндекс.Диске, где будут храниться данные приложения
 // он окажется в "Приложения" → "qc_app" → "modules_data.json"
-const FILE_PATH = "/apps/qc_app/modules_data.json";
+const FILE_PATH = "disk:/qc_app/modules_data.json";
 
 if (!YANDEX_TOKEN) {
   console.warn("ВНИМАНИЕ: переменная окружения YANDEX_TOKEN не задана!");
@@ -91,4 +91,5 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log(`QC backend listening on port ${PORT}`);
 });
+
 
